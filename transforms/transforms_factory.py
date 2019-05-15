@@ -10,6 +10,6 @@ def get_transforms(name):
         raise ValueError('Preprocessing name [%s] was not recognized' % name)
 
     def get_transforms_fn(output_size, **kwargs):
-        return transforms_fn_map[name].get_transforms(output_size, **kwargs)            ?**kwargs
+        return transforms_fn_map[name].get_transforms(output_size, **kwargs)            #?**kwargs
 
     return get_transforms_fn
