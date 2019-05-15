@@ -22,7 +22,7 @@ def make_OH_train_val_splits(dataset_dir, domain):
     for d in ['train', 'val']:
         os.mkdir(os.path.join(target, d))
 
-    for label in os.listdir(os.path.join(dataset_dir, domain)):                             #???
+    for label in os.listdir(os.path.join(dataset_dir, domain)):
 
         for d in ['train', 'val']:
             os.mkdir(os.path.join(target, d, label))
@@ -67,6 +67,6 @@ def get_dataset(dataset_dir, data_transforms, test_domain):
     data_dirs[test_domain]['test'] = os.path.join(dataset_dir, test_domain)
 
     image_datasets = {x: [datasets.ImageFolder(data_dirs[d][x], data_transforms[x]) for d in domains]
-                      for x, domains in zip(['train', 'val', 'test'], [train_domains, train_domains, [test_domain]])}     #???
+                      for x, domains in zip(['train', 'val', 'test'], [train_domains, train_domains, [test_domain]])}
 
     return image_datasets, OH_classes
