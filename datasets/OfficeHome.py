@@ -46,7 +46,7 @@ def make_OH_splits(dataset_dir):
 
 def get_dataset(dataset_dir, data_transforms, test_domain):
 
-    assert test_domain in OH_domains
+    assert test_domain in OH_domains                                              #???
 
     train_domains = list(filter(lambda x: x != test_domain, OH_domains))
 
