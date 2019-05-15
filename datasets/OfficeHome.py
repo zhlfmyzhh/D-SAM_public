@@ -22,7 +22,7 @@ def make_OH_train_val_splits(dataset_dir, domain):
     for d in ['train', 'val']:
         os.mkdir(os.path.join(target, d))
 
-    for label in os.listdir(os.path.join(dataset_dir, domain)):     #???
+    for label in os.listdir(os.path.join(dataset_dir, domain)):                             #???
 
         for d in ['train', 'val']:
             os.mkdir(os.path.join(target, d, label))
