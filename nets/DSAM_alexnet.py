@@ -37,7 +37,7 @@ class FCAL(nn.Module):
     def __init__(self, in_channels, out_channels):
         super(FCAL, self).__init__()
 
-        self.aggregation_layer = nn.Sequential(nn.ReLU(),
+        self.aggregation_layer = nn.Sequential(nn.ReLU(),                                       #???
                                                nn.Linear(in_channels, out_channels),
                                                nn.ReLU(inplace=True))
 
