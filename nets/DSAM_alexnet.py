@@ -42,7 +42,7 @@ class FCAL(nn.Module):
                                                nn.ReLU(inplace=True))
 
     def forward(self, x):
-        x = torch.cat(x, 1)
+        x = torch.cat(x, 1)                                                                     #???
         aggregation = self.aggregation_layer(x)
         return aggregation
 
