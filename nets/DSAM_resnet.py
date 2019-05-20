@@ -84,7 +84,8 @@ class Convolutional_Aggregation_Module(nn.Module):
 
         return out
 
-
+'''
+#change
 class DSAM_ResNet18(nn.Module):
     def __init__(self, net, num_classes=1000, num_domains=3, batch_size=32, aggr_fn=Convolutional_Aggregation_Module):
         super(DSAM_ResNet18, self).__init__()
@@ -152,7 +153,7 @@ class DSAM_ResNet18(nn.Module):
                                                  main_outs[7][(i*self.bs):((i+1)*self.bs)])) for i in range(self.num_domains)]
 
             return outs
-
+'''
 
 class DeepAll_ResNet18(nn.Module):
     def __init__(self, net, num_classes=1000):
