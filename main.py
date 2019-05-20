@@ -49,7 +49,7 @@ def main():
     # Image Transforms #
     ####################
 
-    transforms_name = args.transforms_name or args.model_name                   #???
+    transforms_name = args.transforms_name or args.model_name                                                   #???
     get_transforms_fn = transforms_factory.get_transforms(transforms_name)
 
     data_transforms = get_transforms_fn(args.im_size)
@@ -63,7 +63,7 @@ def main():
 
     dataset_kwargs_map = {}
     if args.dataset_fn_keys is not None:
-        for k, v in zip(args.dataset_fn_keys.split(','), args.dataset_fn_values.split(',')):
+        for k, v in zip(args.dataset_fn_keys.split(','), args.dataset_fn_values.split(',')):                    #???
             dataset_kwargs_map[k] = v
     image_datasets, classes = get_dataset_fn(args.dataset_dir, data_transforms=data_transforms, **dataset_kwargs_map)
 
