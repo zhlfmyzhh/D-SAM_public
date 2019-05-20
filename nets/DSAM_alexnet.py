@@ -21,12 +21,12 @@ def deepall_alexnet(num_classes=1000, pretrained=True, num_domains=3, batch_size
     model = DeepAll_AlexNet(pretrained, num_classes)
     return model
 
-
+'''
 def DSAM_alexnet(num_classes=1000, pretrained=True, num_domains=3, batch_size=32):
     pretrained = alexnet(pretrained=pretrained)
     model = DSAM_AlexNet(pretrained, num_classes, num_domains, batch_size=batch_size)
     return model
-
+'''
 
 class Flatten(nn.Module):
     def forward(self, x):
@@ -97,7 +97,7 @@ class Aggregation_Module(nn.Module):
         out = self.classifier(aggr6)
         return aggr6
 
-
+'''
 class DSAM_AlexNet(nn.Module):
     def __init__(self, net, num_classes=None, num_domains=3, batch_size=32):
         super(DSAM_AlexNet, self).__init__()
@@ -152,7 +152,7 @@ class DSAM_AlexNet(nn.Module):
                                                  fc7[(i*self.bs):((i+1)*self.bs)]))
                     for i in range(self.num_domains)]
             return outs
-
+'''
 
 class DeepAll_AlexNet(nn.Module):
     def __init__(self, net, num_classes=None):
