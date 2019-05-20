@@ -81,7 +81,7 @@ class DSAMTraining(AbstractTraining):
                     labels[s_idx:e_idx] = domain_labels
 
                 if self.use_gpu:
-                    inputs = inputs.cuda()
+                    inputs = inputs.cuda()                                          #???
                     labels = labels.cuda()
 
                 optimizer.zero_grad()
