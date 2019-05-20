@@ -5,7 +5,7 @@ from torchvision.models import resnet
 
 __all__ = ['DSAM_resnet18', 'deepall_resnet18']
 
-“”“     #change
+“”“ change
 def DSAM_resnet18(num_classes=1000, pretrained=True, num_domains=3, batch_size=32):
     if pretrained:
         print('initializing from pretrained')
