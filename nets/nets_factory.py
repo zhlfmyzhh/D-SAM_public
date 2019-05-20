@@ -3,8 +3,8 @@ from nets import DSAM_resnet
 
 
 nets_map = {
-    'DSAM_alexnet': DSAM_alexnet.DSAM_alexnet,
-    'DSAM_resnet18': DSAM_resnet.DSAM_resnet18,
+    #'DSAM_alexnet': DSAM_alexnet.DSAM_alexnet,                         #DSAM nets are deleted
+    #'DSAM_resnet18': DSAM_resnet.DSAM_resnet18,
     'deepall_alexnet': DSAM_alexnet.deepall_alexnet,
     'deepall_resnet18': DSAM_resnet.deepall_resnet18
     }
