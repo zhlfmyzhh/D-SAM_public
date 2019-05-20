@@ -32,7 +32,7 @@ class Flatten(nn.Module):
     def forward(self, x):
         return x.view(x.size(0), -1)
 
-
+'''
 class FCAL(nn.Module):
     def __init__(self, in_channels, out_channels):
         super(FCAL, self).__init__()                                                            #???
@@ -96,7 +96,7 @@ class Aggregation_Module(nn.Module):
         aggr6 = self.aggregation_6((aggr5, fc7))
         out = self.classifier(aggr6)
         return aggr6
-
+'''
 '''
 class DSAM_AlexNet(nn.Module):
     def __init__(self, net, num_classes=None, num_domains=3, batch_size=32):
