@@ -16,7 +16,7 @@ from trainings import training_factory
 def parse():
     parser = argparse.ArgumentParser()
     parser.add_argument('job_name', type=str)
-    parser.add_argument('--logdir', type=str, default='')
+    parser.add_argument('--logdir', type=str, default='')                                                               #???
     parser.add_argument('--dataset_name', type=str, default='PACS')
     parser.add_argument('--num_domains', type=int, default=3)
     parser.add_argument('--dataset_dir', type=str, default='/DATA5_DB8/data/yxzhang/DA/data/PACS/Raw images/PACS/')     #change
