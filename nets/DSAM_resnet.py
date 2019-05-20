@@ -25,7 +25,7 @@ class Flatten(nn.Module):
     def forward(self, x):
         return x.view(x.size(0), -1)
 
-
+'''
 class CAL(nn.Module):
     def __init__(self, low_in_channels, same_in_channels, out_channels, requires_downsample=False):
         super(CAL, self).__init__()
@@ -83,7 +83,7 @@ class Convolutional_Aggregation_Module(nn.Module):
         out = self.classifier(out)
 
         return out
-
+'''
 '''
 #change
 class DSAM_ResNet18(nn.Module):
