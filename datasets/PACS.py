@@ -29,7 +29,7 @@ def make_PACS_train_val_splits(dataset_dir, domain):
 
 
 def make_PACS_splits(dataset_dir):
-    os.mkdir(os.path.join(dataset_dir, 'pytorch'))
+    os.makedirs(os.path.join(dataset_dir, 'pytorch'))                               #change
     for domain in PACS_domains:
         make_PACS_train_val_splits(dataset_dir, domain)
 
