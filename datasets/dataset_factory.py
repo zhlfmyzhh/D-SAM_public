@@ -5,7 +5,7 @@ from datasets import VLCS
 datasets_map = {
     'PACS': PACS.get_dataset,
     'OfficeHome': OfficeHome.get_dataset,
-    'VLCS': VLCS.get_dataset
+    #'VLCS': VLCS.get_dataset
 }
 
 def get_dataset(name):
