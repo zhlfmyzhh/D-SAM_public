@@ -86,7 +86,7 @@ def main():
     num_classes = len(classes)
     model = get_network_fn(num_classes, pretrained=args.pretrained,
                            num_domains=args.num_domains, batch_size=args.batch_size)#,
-                           #target=args.dataset_name.split(':')[1])                                    #???
+                           #target=args.dataset_name.split(':')[1])
 
     ####################
     # Prepare training #
