@@ -63,9 +63,9 @@ def main():
 
     dataset_kwargs_map = {}
     if args.dataset_fn_keys is not None:
-        for k, v in zip(args.dataset_fn_keys.split(','), args.dataset_fn_values.split(',')):                    #???
+        for k, v in zip(args.dataset_fn_keys.split(','), args.dataset_fn_values.split(',')):                    #把多个test domain分割开来
             dataset_kwargs_map[k] = v
-    image_datasets, classes = get_dataset_fn(args.dataset_dir, data_transforms=data_transforms, **dataset_kwargs_map)
+    image_datasets, classes = get_dataset_fn(args.dataset_dir, data_transforms=data_transforms, **dataset_kwargs_map)   #观察不加**效果
 
     #######################
     # Prepare dataloaders #
