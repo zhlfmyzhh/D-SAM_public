@@ -158,7 +158,7 @@ class DeepAll_AlexNet(nn.Module):
     def __init__(self, net, num_classes=None):
         super(DeepAll_AlexNet, self).__init__()
         
-        self.conv1 = nn.Sequential(*list(net.features.children())[0:1])
+        self.conv1 = nn.Sequential(*list(net.features.children())[0:1])                         #???
         self.conv2 = nn.Sequential(*list(net.features.children())[1:4])
         self.conv3 = nn.Sequential(*list(net.features.children())[4:7])
         self.conv4 = nn.Sequential(*list(net.features.children())[7:9])
