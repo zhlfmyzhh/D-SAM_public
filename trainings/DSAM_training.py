@@ -28,7 +28,7 @@ class DSAMTraining(AbstractTraining):
 
         since = time.time()
 
-        best_model = copy.deepcopy(self.model.state_dict())
+        best_model = copy.deepcopy(self.model.state_dict())                                 #Path?
         best_acc = 0.0
 
         dataset_sizes = {x: [len(dataloaders[x][i].dataset)
