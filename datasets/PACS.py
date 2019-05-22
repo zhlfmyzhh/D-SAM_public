@@ -22,7 +22,7 @@ def make_PACS_train_val_splits(dataset_dir, domain):
 
         for i, item in enumerate(filenames):
             if i % 10 == 0:
-                os.symlink(item, os.path.join(target, 'val', label, item.split('/')[-1]))
+                os.symlink(item, os.path.join(target, 'val', label, item.split('/')[-1]))               #???
 
             else:
                 os.symlink(item, os.path.join(target, 'train', label, item.split('/')[-1]))
