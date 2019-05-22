@@ -56,7 +56,7 @@ class DSAMTraining(AbstractTraining):
 
             scheduler.step()
 
-            self.logger.scalar_summary("learning_rate", scheduler.get_lr()[-1], self.current_step)
+            self.logger.scalar_summary("learning_rate", scheduler.get_lr()[-1], self.current_step)      #-1?
             print("Lr: " + str(scheduler.get_lr()))
             self.model.train(True)
 
