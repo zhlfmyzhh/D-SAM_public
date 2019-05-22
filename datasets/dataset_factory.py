@@ -13,6 +13,6 @@ def get_dataset(name):
         raise ValueError('Name of dataset unknown %s' % name)
 
     def get_dataset_fn(dataset_dir, **kwargs):
-        return datasets_map[name](dataset_dir, **kwargs)
+        return datasets_map[name](dataset_dir, **kwargs)            #观察加data_transforms, daset_dir之后
 
     return get_dataset_fn
