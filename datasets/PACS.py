@@ -55,7 +55,7 @@ def get_dataset(dataset_dir, data_transforms, test_domain):
         for split in ['train','val']:
             data_dirs[d][split] = os.path.join(dataset_dir, 'pytorch', d, split)
 
-    data_dirs[test_domain]['test'] = os.path.join(dataset_dir, test_domain)
+    data_dirs[test_domain]['test'] = os.path.join(dataset_dir, test_domain)                                   #???
 
     image_datasets = {x: [datasets.ImageFolder(data_dirs[d][x], data_transforms[x]) for d in domains]         #ImageFolder数据加载              
                       for x, domains in zip(['train', 'val', 'test'], [train_domains, train_domains, [test_domain]])}
