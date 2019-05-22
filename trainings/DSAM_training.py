@@ -38,8 +38,8 @@ class DSAMTraining(AbstractTraining):
         self.current_step = 0
         cudnn.benchmark = True
 
-        sizes = [s for sublist in dataset_sizes.values() for s in sublist]                   #???
-        steps_per_epoch = int(max(sizes) / batch_size)
+        sizes = [s for sublist in dataset_sizes.values() for s in sublist]
+        steps_per_epoch = int(max(sizes) / batch_size)                                       #???
         log_frequency = steps_per_epoch // 5                                                 #???
         print('Working with %d steps per epoch' % steps_per_epoch)
         training_epoch_size = batch_size * len(dataloaders['train']) * steps_per_epoch
