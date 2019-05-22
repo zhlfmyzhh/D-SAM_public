@@ -100,7 +100,7 @@ def main():
     params_to_optimize = model.parameters()
     optimizer = optim.SGD(params_to_optimize, lr=args.learning_rate, momentum=args.momentum, weight_decay=args.weight_decay)
 
-    exp_lr_scheduler = lr_scheduler.StepLR(optimizer, step_size=args.step_size, gamma=args.gamma)
+    exp_lr_scheduler = lr_scheduler.StepLR(optimizer, step_size=args.step_size, gamma=args.gamma)           #学习率的变化策略
 
     training_fn = args.training_fn
     get_training_fn = training_factory.get_training(training_fn)
