@@ -172,7 +172,7 @@ class DeepAll_AlexNet(nn.Module):
 
     def forward(self, x):
         if len(x)==2:
-            x, _ = x
+            x, _ = x                                                    #???
             conv1 = self.conv1(x)
             conv2 = self.conv2(conv1)
             conv3 = self.conv3(conv2)
