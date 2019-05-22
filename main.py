@@ -35,7 +35,7 @@ def parse():
     parser.add_argument('--num_epochs', type=int, default=30)
     parser.add_argument('--step_size', type=int, default=10)
     parser.add_argument('--gamma', type=float, default=0.2)
-    parser.add_argument('--num_workers', type=int, default=4)
+    parser.add_argument('--num_workers', type=int, default=4)                                                       #用几个？
     args = parser.parse_args()
     return args
 
