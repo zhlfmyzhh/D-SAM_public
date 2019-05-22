@@ -52,7 +52,7 @@ def main():
     transforms_name = args.transforms_name or args.model_name                                                   #???
     get_transforms_fn = transforms_factory.get_transforms(transforms_name)
 
-    data_transforms = get_transforms_fn(args.im_size)
+    data_transforms = get_transforms_fn(args.im_size)                                                           #output size
 
     ##################
     # Select dataset #
