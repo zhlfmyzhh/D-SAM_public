@@ -17,7 +17,7 @@ ch = {
 
 
 def deepall_alexnet(num_classes=1000, pretrained=True, num_domains=3, batch_size=32):
-    pretrained = alexnet(pretrained=pretrained)
+    pretrained = alexnet(pretrained=pretrained)                                                 #???
     model = DeepAll_AlexNet(pretrained, num_classes)
     return model
 
