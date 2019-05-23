@@ -120,7 +120,7 @@ def main():
     # Save #
     ########
 
-    training.save_model('%s/model' % (log_path))                                        #save_model在abstract_training?
+    training.save_model('%s/model' % (log_path))
 
 
 if __name__ == '__main__':
