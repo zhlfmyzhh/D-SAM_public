@@ -90,7 +90,7 @@ class DSAMTraining(AbstractTraining):
 
                 outputs = torch.cat(outputs, 0)
 
-                _, preds = torch.max(outputs.data, 1)
+                _, preds = torch.max(outputs.data, 1)                               #???
                 loss = criterion(outputs, labels)
 
                 accuracy = (labels.data == preds.squeeze()).float().mean()
