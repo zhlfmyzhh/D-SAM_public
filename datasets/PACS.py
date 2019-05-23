@@ -53,7 +53,7 @@ def get_dataset(dataset_dir, data_transforms, test_domain):
     
     for d in train_domains:
         for split in ['train','val']:
-            data_dirs[d][split] = os.path.join(dataset_dir, 'pytorch', d, split)
+            data_dirs[d][split] = os.path.join(dataset_dir, 'pytorch', d, split)                              #用法？
 
     data_dirs[test_domain]['test'] = os.path.join(dataset_dir, test_domain)                                   #???
 
