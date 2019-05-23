@@ -137,10 +137,10 @@ class DSAMTraining(AbstractTraining):
                     optimizer.zero_grad()
 
                     indexes = list(filter(lambda x: x != i, range(len(dataloaders[phase]))))
-                    multiple_outputs = [self.model((inputs, idx)) for idx in indexes]
+                    multiple_outputs = [self.model((inputs, idx)) for idx in indexes]                   #???
                     outputs = multiple_outputs[0]
                     for o in multiple_outputs[1:]:
-                        outputs.add_(o)
+                        outputs.add_(o)                                                                 #???
                     outputs.mul_(1./len(multiple_outputs))
 
                     _, preds = torch.max(outputs.data, 1)
