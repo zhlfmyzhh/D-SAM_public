@@ -99,7 +99,7 @@ class DSAMTraining(AbstractTraining):
                 optimizer.step()
                 self.current_step += 1
                 if (self.current_step % log_frequency) == 0:
-                    self.log_iteration(accuracy, loss)
+                    self.log_iteration(accuracy, loss)                              #没用？
 
                 running_loss += loss.data.item() * inputs.size(0)
                 running_corrects += torch.sum(preds == labels.data).data.item()
